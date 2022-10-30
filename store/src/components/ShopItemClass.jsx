@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ItemModel from '../models/ItemModel';
 
 
 class ShopItem extends React.Component {
     static propTypes = {
-        item: PropTypes.instanceOf().isRequired
+        item: PropTypes.instanceOf(ItemModel).isRequired
     }
 
     render() {
@@ -25,13 +26,14 @@ class ShopItem extends React.Component {
     }
 }
 
-ShopItem.propTypes = {
-    brand: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    descriptionFull: PropTypes.string,
-    price: PropTypes.number,
-    currency: PropTypes.string,
-}
-
 export default ShopItem;
+
+// ShopItem.propTypes = {
+//     brand: PropTypes.string,
+//     title: PropTypes.string,
+//     description: PropTypes.string,
+//     descriptionFull: PropTypes.string,
+//     price: PropTypes.number,
+//     currency: PropTypes.string,
+//   }
+  
